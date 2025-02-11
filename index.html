@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="resume-container">
+        <h1>Shareable Resume Builder</h1>
+        
+      
+        <form id="resumeform">
+            <fieldset>
+              
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="name">Father's Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Contact no:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="profilepicture">Profile Picture</label>
+                <input type="file" id="profilepicture" name="profilepicture" accept="image/*" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Education</legend>
+                <textarea id="education" name="education" rows="4" required></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Experience</legend>
+                <textarea id="experience" name="experience" rows="4" required></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea id="skills" name="skills" rows="4" required></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Social Media</legend>
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin" name="linkedin">
+                
+                <label for="github">GitHub:</label>
+                <input type="url" id="github" name="github">
+            </fieldset>
+            
+            <button type="submit">Submit Resume</button>
+        </form>
+        
+        <!-- Live Preview -->
+        <div id="resumeOutput" contenteditable="true">
+            <h2>Live Preview</h2>
+        </div>
+    </div>
+    
+    <br>
+    
+    <!-- Section for Shareable Link and Download Option -->
+    <div id="shareable-link-container" style="display:none;">
+        <h2>Shareable Link</h2>
+        <p>Here is your unique link to view or edit your resume:</p>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
